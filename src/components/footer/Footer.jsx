@@ -21,14 +21,14 @@ export default function Footer() {
 
           <span className="flex-1 h-px bg-linear-to-r from-white via-white/60 to-transparent" />
         </div>
-        <p className="text-white font-bold sm:text-[95px] text-[65px] tracking-tight mt-14 text-center sm:leading-20 leading-14">
+        <p className="text-white font-bold sm:text-[95px] text-[58px] tracking-tight mt-14 text-center sm:leading-20 leading-12">
           Join the Community!
         </p>
         <p className="md:mt-[53px] md:mb-0 my-10 text-white font-light text-2xl tracking-tight max-w-[640px] text-center mx-3">
           Subscribe to The Forager to receive monthly plant tips, store updates,
           promotions & more
         </p>
-        <div className=" sm:mt-[53px] rounded-4xl bg-white md:py-[53px] py-8 lg:px-[164px] flex flex-col items-center w-full pb-8">
+        <div className=" sm:mt-[53px] rounded-4xl bg-white md:py-[53px] py-6 lg:px-[164px] flex flex-col items-center w-full ">
           <div className="flex flex-row px-[60px] items-center lg:border lg:border-black rounded-full xl:flex-nowrap flex-wrap justify-center">
             <button className="rounded-full lg:py-5 py-1 border lg:px-10 px-4 border-black text-black font-medium lg:text-[26px] text-lg visited:underline hover:bg-black hover:text-white focus:bg-black focus:text-white transition-all duration-300">
               Instagram
@@ -46,7 +46,7 @@ export default function Footer() {
               Pintrest
             </button>
           </div>
-          <span className="md:my-10 my-5 block h-px w-full bg-linear-to-r from-transparent via-black  to to-transparent" />
+          <span className="md:my-10 mt-4.5 mb-3 block h-px w-full bg-linear-to-r from-transparent via-black  to to-transparent" />
           <p className="md:text-2xl text-lg font-light text-black tracking-tight">
             ©2023, All Right Reserved.
           </p>

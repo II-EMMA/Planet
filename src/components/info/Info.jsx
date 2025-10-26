@@ -4,7 +4,7 @@ import ImageText from "@/assets/images/text-lab-planet.svg";
 export default function Info() {
   return (
     <section className="flex px-8  2xl:flex-nowrap gap-x-2 items-start gap-y-5 lg:justify-between lg:text-start text-center justify-center flex-wrap max-w-[1500px] mx-auto mt-20">
-      <div className="flex flex-col gap-y-[60px] text-black font-lufga max-w-[292px]">
+      <div className="flex flex-col lg:gap-y-[60px] gap-y-5 text-black font-lufga max-w-[292px]">
         <p className="font-extrabold text-[44px] leading-11">
           Plants for the People
         </p>

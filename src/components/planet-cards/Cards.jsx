@@ -44,7 +44,7 @@ export default function Cards() {
           style={{ backgroundImage: `url(${card.img})` }}
         >
           {/* Content above background */}
-          <div className="absolute p-10 flex flex-col justify-between text-white font-lufga w-full h-full">
+          <div className="absolute md:p-10 px-5 py-8 flex flex-col justify-between gap-x-3 text-white font-lufga w-full h-full">
             <div className="flex flex-col gap-y-9">
               <div className="flex flex-row items-center justify-between w-full">
                 <p className="font-bold text-[53px] leading-12">{card.title}</p>

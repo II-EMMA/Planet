@@ -70,7 +70,7 @@ export default function Collection() {
 
   return (
     <section className="flex flex-col font-lufga max-w-[1500px] mx-auto mt-[200px]">
-      <p className="font-extrabold text-black md:text-[125px] text-[75px] self-center mb-16 xl:text-start text-center md:leading-32 sm:leading-24 leading-20">
+      <p className="font-extrabold text-black md:text-[125px] text-[70px] self-center mb-16 xl:text-start text-center md:leading-32 sm:leading-24 leading-16">
         Indoor Collection
       </p>
 

@@ -3,7 +3,7 @@ import SoilImage from "@/assets/images/soil.svg";
 export default function Soil() {
   return (
     <section className="flex flex-col mt-[182px] max-w-[1500px] mx-auto font-lufga items-center">
-      <p className="font-extrabold text-black md:text-[115px] text-[90px] w-full text-center leading-28 mb-5">
+      <p className="font-extrabold text-black md:text-[115px] text-[90px] w-full text-center md:leading-[110px] leading-[80px] mb-5">
         Quality Plants and Curated Goods
       </p>
       <p className="max-w-[920px] font-medium text-lg text-[#131313] text-center mx-2.5">

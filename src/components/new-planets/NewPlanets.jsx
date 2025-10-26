@@ -324,7 +324,9 @@ export default function NewPlanets() {
   return (
     <section className="flex flex-col gap-y-10 font-lufga max-w-[1500px] mx-auto mt-32 px-8">
       <div className="flex 2xl:flex-row flex-col gap-y-5 2xl:gap-y-0 items-center justify-between text-black">
-        <h3 className="font-extrabold text-9xl text-black">New Plants</h3>
+        <h3 className="font-extrabold sm:text-9xl text-8xl text-black text-center">
+          New Plants
+        </h3>
         <p className="max-w-[619px] font-semibold text-lg 2xl:text-start text-center">
           Bring nature insider and shop our big selections of fresh indoor
           plants including Instagram-worthy houseplants, pet-friendly plants,
@@ -337,14 +339,15 @@ export default function NewPlanets() {
           <div
             key={i}
             ref={(el) => (cardRefs.current[i] = el)}
-            className="flex flex-col gap-y-3.5 shadow-xl p-4 rounded-3xl bg-white cursor-pointer transform-gpu"
+            className="flex flex-col gap-y-3.5 shadow-xl p-4 rounded-3xl bg-white cursor-pointer transform-gpu w-full sm:max-w-[450px] "
           >
-            <div className="relative w-[414px] h-[316px] overflow-hidden rounded-2xl">
+            <div className="relative w-full sm:w-[414px] h-[316px] overflow-hidden rounded-2xl">
               <img
                 src={card.img}
                 alt={card.title}
                 className="absolute w-full h-full inset-0 object-cover"
               />
+
               <div className="heart absolute top-4 left-2.5 w-16 h-16 rounded-full flex items-center justify-center bg-white/30 backdrop-blur-[15px]">
                 <FaRegHeart size={23} className="text-white" />
               </div>
@@ -361,7 +364,7 @@ export default function NewPlanets() {
                   {card.price}
                 </p>
               </div>
-              <div className="arrow self-end w-16 h-16 rounded-full flex items-center justify-center bg-[#151515]">
+              <div className="arrow self-end sm:w-16 w-11 h-11 sm:h-16 rounded-full flex items-center justify-center bg-[#151515]">
                 <FaArrowRight className="text-white" />
               </div>
             </div>
