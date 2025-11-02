@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { FaArrowRight } from "react-icons/fa6";
@@ -34,7 +35,6 @@ export default function QNA() {
       if (!content || !arrow) return;
 
       if (i === active) {
-        // expand smoothly
         gsap.fromTo(
           content,
           { height: 0, autoAlpha: 0 },
@@ -44,13 +44,12 @@ export default function QNA() {
             duration: 0.6,
             ease: "power3.out",
             onComplete: () => {
-              content.style.height = "auto"; // reset to auto after animation
+              content.style.height = "auto";
             },
           }
         );
         gsap.to(arrow, { rotate: -45, duration: 0.4, ease: "power3.out" });
       } else {
-        // collapse smoothly
         gsap.to(content, {
           height: 0,
           autoAlpha: 0,
@@ -63,39 +62,38 @@ export default function QNA() {
   }, [active]);
 
   return (
-    <section className="lg:mt-[182px] mt-[135px] py-14 px-12 flex flex-col gap-y-10 font-lufga text-black max-w-[1500px] mx-auto">
+    <section className="lg:mt-[182px] mt-[135px] lg:py-14 pb-14 px-2 sm:px-12 flex flex-col gap-y-10 font-lufga text-black max-w-[1500px] mx-auto">
       {qnaItems.map((item, i) => (
         <div
           key={i}
-          className="flex justify-between border-2 border-black p-10 rounded-4xl"
+          className="flex flex-col border-2 border-black sm:p-10 py-10 px-5 rounded-4xl"
         >
-          <div className="flex flex-col gap-y-[26px] w-full">
-            <p className="font-extrabold sm:text-[46px] text-2xl sm:leading-12">
+          <div className="flex justify-between gap-2 w-full">
+            <p className="font-extrabold sm:text-[46px] text-3xl sm:leading-12 w-full">
               {item.q}
             </p>
             <div
-              ref={(el) => (contentRefs.current[i] = el)}
-              className="overflow-hidden"
-              style={{
-                height: i === active ? "auto" : 0,
-                opacity: i === active ? 1 : 0,
-              }}
+              onClick={() => setActive(i === active ? null : i)}
+              className="self-start shrink-0 cursor-pointer border-2 border-black sm:w-[60px] w-10 h-10 sm:h-[60px] rounded-full flex items-center justify-center"
             >
-              <p className="font-medium text-2xl max-w-[1095px]">{item.a}</p>
+              <FaArrowRight
+                ref={(el) => (arrowRefs.current[i] = el)}
+                className="text-black font-extrabold sm:size-7 size-4.5"
+                style={{
+                  transform: i === active ? "rotate(-45deg)" : "rotate(45deg)",
+                }}
+              />
             </div>
           </div>
           <div
-            onClick={() => setActive(i === active ? null : i)}
-            className="shrink-0 cursor-pointer border-2 border-black w-[60px] h-[60px] rounded-full flex items-center justify-center"
+            ref={(el) => (contentRefs.current[i] = el)}
+            className="overflow-hidden mt-6"
+            style={{
+              height: i === active ? "auto" : 0,
+              opacity: i === active ? 1 : 0,
+            }}
           >
-            <FaArrowRight
-              ref={(el) => (arrowRefs.current[i] = el)}
-              size={28}
-              className="text-black font-extrabold"
-              style={{
-                transform: i === active ? "rotate(-45deg)" : "rotate(45deg)",
-              }}
-            />
+            <p className="font-medium sm:text-2xl text-lg w-full">{item.a}</p>
           </div>
         </div>
       ))}

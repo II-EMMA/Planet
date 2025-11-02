@@ -64,7 +64,7 @@ export default function Collection() {
     {
       title: "Low Light Tolerant",
       img: CollectionCardFour.src,
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Sed lobortis orci elementum egestas lobortis.",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Sed lobortis orci elementum.",
     },
   ];
 
@@ -75,7 +75,7 @@ export default function Collection() {
       </p>
 
       {/* Top Row */}
-      <div className="flex lg:flex-row flex-col gap-x-5 items-center mb-6">
+      <div className="flex lg:flex-row flex-col lg:gap-x-5 items-center lg:mb-6">
         {cards.slice(0, 2).map((card, i) => {
           const index = i;
           return (
@@ -101,7 +101,7 @@ export default function Collection() {
 
                 {/* Default: only title */}
                 <p
-                  className={`font-bold sm:text-7xl text-[52px] leading-14 text-white mx-5 mb-[77px] ${
+                  className={`font-bold sm:text-7xl text-[52px] leading-14 text-white sm:mx-5 sm:text-start text-center mb-[77px] ${
                     active === index ? "opacity-0" : ""
                   }`}
                 >
@@ -112,9 +112,9 @@ export default function Collection() {
                 {active === index && (
                   <div
                     ref={(el) => (panelRefs.current[index] = el)}
-                    className="rounded-3xl bg-white/10 backdrop-blur-[25px] mx-2.5 mb-2.5 flex flex-col py-5 px-6 gap-y-6 opacity-0 translate-y-5 absolute bottom-0 left-0 right-0"
+                    className="rounded-3xl bg-white/10 backdrop-blur-[25px] mx-2.5 mb-2.5 flex flex-col py-5 px-6 sm:gap-y-6 gap-y-5.5 opacity-0 translate-y-5 absolute bottom-0 left-0 right-0"
                   >
-                    <p className="font-bold sm:text-7xl text-[52px] leading-14 text-white">
+                    <p className="font-bold sm:text-7xl text-[43px] leading-14 text-white">
                       {card.title}
                     </p>
                     <p className="font-normal text-base text-white max-w-[717px]">
@@ -155,7 +155,7 @@ export default function Collection() {
 
                 {/* Default: only title */}
                 <p
-                  className={`font-bold sm:text-7xl text-[52px] leading-14 text-white mx-5 mb-[77px] ${
+                  className={`font-bold sm:text-7xl text-[52px] leading-14 text-white sm:mx-5 sm:text-start text-center mb-[77px] ${
                     active === index ? "opacity-0" : ""
                   }`}
                 >
@@ -166,9 +166,9 @@ export default function Collection() {
                 {active === index && (
                   <div
                     ref={(el) => (panelRefs.current[index] = el)}
-                    className="rounded-3xl bg-white/10 backdrop-blur-[25px] mx-2.5 mb-2.5 flex flex-col py-5 px-6 gap-y-5.5 opacity-0 translate-y-5 absolute bottom-0 left-0 right-0"
+                    className="rounded-3xl bg-white/10 backdrop-blur-[25px] mx-2.5 mb-2.5 flex flex-col py-5 px-6 sm:gap-y-5.5 gap-y-4.5 opacity-0 translate-y-5 absolute bottom-0 left-0 right-0"
                   >
-                    <p className="font-bold sm:text-7xl text-[52px] leading-14 text-white">
+                    <p className="sm:font-bold font-extrabold sm:text-7xl text-[45px] leading-14 text-white">
                       {card.title}
                     </p>
                     <p className="font-normal text-base text-white max-w-[717px]">
